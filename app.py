@@ -8,13 +8,18 @@ import plotly.graph_objects as go
 # --- CONFIGURATION ---
 st.set_page_config(page_title="Sales & Student Dashboard", layout="wide", page_icon="📈")
 
-# --- HIDE STREAMLIT BRANDING (WHITE-LABEL) ---
+# --- HIDE ALL STREAMLIT BRANDING & EMBED BADGES ---
 hide_st_style = """
             <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            /* Adjust top padding to remove empty space */
+            #MainMenu {visibility: hidden !important;}
+            footer {visibility: hidden !important; display: none !important;}
+            header {visibility: hidden !important;}
+            
+            /* Target the specific floating watermark used in embed mode */
+            .viewerBadge_container {display: none !important;}
+            .viewerBadge_link {display: none !important;}
+            [data-testid="stDecoration"] {display: none !important;}
+            
             .block-container {
                 padding-top: 1rem;
                 padding-bottom: 1rem;
